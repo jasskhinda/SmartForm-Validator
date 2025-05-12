@@ -1,80 +1,50 @@
-# 🚗 Trip Booking Form – Save Progress & Submit Later
+# 🧾 SmartForm Validator – Trip Booking Form
 
-A clean, mobile-friendly trip booking form that lets users **fill in**, **save progress**, and **submit** later.  
-Built with HTML, CSS, and JavaScript using browser localStorage (no backend needed).
-
----
-
-## 🧠 Features
-
-- ✅ Full trip request form with key fields
-- 💾 **Save Form**: Save progress to local storage
-- 🧠 Auto-load saved data when user returns
-- 📬 **Submit Request**: Clears saved data after submission
-- 📱 Fully responsive & easy to use
+This is our college project for SmartForm Validator – MVP #3.  
+It lets users fill out a trip booking form, save it, and submit it when ready.
 
 ---
 
-## 📂 Project Structure
-
-
----
-
-## 📋 Form Fields
-
-### 👤 Personal Info
-- Full Name
-- Email
-- Phone Number
-
-### 📍 Trip Details
-- Pickup Address
-- Drop-off Address
-- Trip Date
-- Trip Time
-- Trip Type (One Way / Round Trip)
-- Number of Passengers
-- Special Instructions
-
-### 🛠️ Actions
-- 💾 Save Form
-- 🚀 Submit Request
-
----
-
-## 💾 How Saving Works
-
-We use `localStorage` to save the form data in the browser.  
-When users come back later, their previously typed data will automatically be loaded so they can continue where they left off.
-
----
-
-## 🛠️ Technologies Used
-
-- **HTML5**
-- **CSS3**
-- **JavaScript (ES6)**
-- **localStorage API**
-
----
-
-## 🔮 Future Enhancements
-
-- Add real-time backend (e.g., Firebase)
-- Email confirmation on form submission
-- Login system with saved bookings
-
----
-
-## 👨‍🎓 Created By
+## 👥 Team 1
 
 - **Jaspal Singh**
 - **Param**
-- **Course:** Advanced JavaScript – College Project
-- **Feature Focus:** Debounce, Stack for Undo, Smart Form Saving
 
 ---
 
-## 🧪 Try It Live (Optional)
+## ✅ What This Form Does
 
-> You can upload this on GitHub Pages or Netlify for live preview.
+- Users enter trip details (name, email, pickup, drop-off, time, etc.)
+- Users click **Save Form** to save their info
+- When they come back, their form is auto-filled based on their email
+- After clicking **Submit Request**, the user must wait for approval before sending another request
+
+---
+
+## 🧠 Core Algorithms Used
+
+### 1. 📦 **Stack** → Used to save form state
+We use a stack to store form data each time the user clicks "Save Form".  
+This lets us track changes and reuse that data if needed later.
+
+### 2. 🔁 **Debounce** → Used when checking for saved data
+When the user types their email, debounce waits 500ms before checking if there's a saved form.  
+This stops the app from checking too often while typing.
+
+### 3. 🔍 **Regex / Pattern Matching** → Used to check email input
+We make sure the email is not empty (and can be extended to check valid email format).  
+This prevents saving blank or broken data.
+
+---
+
+## 🛠️ Tech Used
+
+- HTML for form structure  
+- CSS for clean design  
+- JavaScript for logic and algorithms  
+- `localStorage` to save form data without a server
+
+---
+
+## 📁 Files
+
